@@ -3,14 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TestComponent } from './test/test.component';
+import{FormsModule} from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+//import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
+import { DirectivasComponent } from './directivas/directivas.component';
+import { EmpleadoComponent } from './empleado/empleado.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestComponent,
+    DirectivasComponent,
+    EmpleadoComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgbModule,
+   // SweetAlert2Module
   ],
   providers: [],
   bootstrap: [AppComponent]

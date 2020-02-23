@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-12">
+        <p><b>Nombre: </b>{{datos.nombre}}</p>
+        <p><b>Edad: </b>{{datos.edad}}</p>
+        <p><b>Profesión: </b>{{datos.profesion}}</p>
+        <label for="">
+        Correo <input type="text" [(ngModel)]="correo" >
+    </label>
+        <label for="">
+        Clave <input type="text" [(ngModel)]="clave" >
+    </label>
+        <button (click)="click()">Presioname</button><br/>
+        <button (dblclick)="puntuar()">presioname: {{punto}}</button><br/>
+        <label for="">
+        change <input type="text" (ngModelChange)="cuentaLetrass()" [(ngModel)]="chance" > <br>
+    <p> la cantidad de letras es: {{contador}} </p>
+    </label>
+
+        <label for="">
+        blur <input type="text" (blur)="onFocus($event)"  > <br>
+    <p> la cantidad de letras es: {{focus}} </p>
+    </label>
+        <label for="">
+        focus <input type="text" (focus)="onFocus($event)"  > <br>
+    <p> la cantidad de letras es: {{focus}} </p>
+    </label>
+
+        <label for="">
+        input <input (keydown)="keyDown($event)"  type="text" /> <br>
+    
+    </label>
+
+      <label for="">
+        input <input (keyup.enter)="keyUp()"  type="text" /> <br>
+    <p>  </p>
+    </label>
+
+
+    </div>
+</div>

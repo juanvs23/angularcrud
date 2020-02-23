@@ -1,0 +1,17 @@
+  <div class="card" style="margin-top: 1rem">
+  	<div class="card-body">
+  <p><b>Nombre: </b> {{empleado.Nombre}} </p>
+                            <p [style.color]="empleado.Salario<100000?'red':'green'"><b>Salario: </b>$ {{empleado.Salario}} </p>
+                            <p ><b>Cargo: </b> {{empleado.Cargo}} </p>
+                            <p><b>Rango: </b> {{empleado.Rango}} </p>
+  		
+  	</div>
+  	<div class="card-footer d-flex justify-content-around">
+  		<button class="btn btn-danger" (click)="borrar(empleado.id)" >
+  			Borrar
+  		</button>
+  		<button class="btn btn-warning" (click)="editar(empleado.id)" >
+  			Editar
+  		</button>
+  	</div>
+  </div>

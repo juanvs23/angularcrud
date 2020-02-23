@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-12">
+        <h2> Ng If</h2>
+
+        <div class="row">
+            <div class="col-12">
+                Mientras carga sea <span *ngIf="carga else ver">{{carga}} se vera el loader</span>
+                <ng-template #ver>{{carga}} No se vera el loader</ng-template>
+
+            </div>
+            <div class="col-12 content-justify-center">
+
+                <button class="btn btn-success" [class.colorRojo]="!carga" [disabled]="disabledBTN" (click)="cambiaValor()">valor de carga {{carga}}</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <h2> NgFor</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+
+                        <div class="col-md-4" *ngFor="let empleado of empleados">
+                          <app-empleado [empleado]="empleado" 
+                          (deleteid)="getId($event)"
+                          (editId)="setId($event)"    
+                          ></app-empleado>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <app-form [empladoList]="empleados"></app-form>
+
+                   
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+        <div class="row loader" *ngIf="carga==true">
+            <div class="col-4"><img src="https://www.gifmaniacos.es/wp-content/uploads/2019/09/google-gifmaniacos.es-5-1.gif" class="img-fluid" alt=""></div>
+            <div class="col-12 content-justify-center">
+
+                <button class="btn btn-success" [class.colorRojo]="!carga" [disabled]="disabledBTN" (click)="cambiaValor()">valor de carga {{carga}}</button>
+
+            </div>
+        </div>
