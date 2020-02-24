@@ -1,7 +1,7 @@
-  <div class="card" style="margin-top: 1rem">
+  <div class="card" style="margin-top: 1rem" appTestColor>
   	<div class="card-body">
   <p><b>Nombre: </b> {{empleado.Nombre}} </p>
-                            <p [style.color]="empleado.Salario<100000?'red':'green'"><b>Salario: </b>$ {{empleado.Salario}} </p>
+                            <p [style.color]="empleado.Salario<100000?'red':'green'"><b>Salario: </b> {{empleado.Salario |currency}} </p>
                             <p ><b>Cargo: </b> {{empleado.Cargo}} </p>
                             <p><b>Rango: </b> {{empleado.Rango}} </p>
   		

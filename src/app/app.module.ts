@@ -11,6 +11,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DirectivasComponent } from './directivas/directivas.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { FormComponent } from './form/form.component';
+import { TestColorDirective } from './test-color.directive';
+import { TestPipe } from './test.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormComponent } from './form/form.component';
     TestComponent,
     DirectivasComponent,
     EmpleadoComponent,
-    FormComponent
+    FormComponent,
+    TestColorDirective,
+    TestPipe
   ],
   imports: [
     BrowserModule,
